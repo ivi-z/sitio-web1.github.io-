@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 15px;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+/* Estilos del HEADER y el NAVEGADOR */
+.encabezado h1{
+    transition: 1.2s;
+}
+.encabezado h1:hover{
+    transform: scale(1.1);
+}
+.encabezado img{
+    transition: all 0.6s;
+}
+.encabezado img:hover{
+    transform:scale(1.2)
+}
+.nav .menu a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.1s;
+    margin: 0px 5px;
+}
+.menu a:hover{
+    color: rgb(163, 161, 159);
+}
+
+/* ------------- */
+/* MAIN */
+.main{
+    background-color: #b4a6d2;
+}
+.seccion-productos{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.carrusel-buzoUno{
+   grid-column-start: 2;
+   grid-column-end: span 3;
+}
+.carrusel-buzos{
+   grid-column-start: 1;
+   grid-column-end: span 2;
+}
+
+/* ------------- */
+/* FOOTER */
+
+.iconos-redes-sociales a{
+    padding: 3px 1px ;
+}
+.iconos-redes-sociales a:hover{
+    background-color:#3f3f3fd0;
+    border-radius: 30px;
+}
+.iconos-redes-sociales i{
+    padding: 5px;
+}
+
+/*--------------------- */
+/* PAGINA SOBRE NOSOTROS */
+/*--------------------- */
+/* main */
+.sobreNos{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    background-color: #755480;
+}
+.sobreNos-objetivos h3{
+    font-size: 15px;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.sobreNos-objetivos h3:hover{
+    transform: scale(1.1);
+}
+.sobreNos-objetivos dl dt{
+    color: #755480;
+    padding: 10px;
+    font-weight: 400;
+    transition: all 0.2s;
+}
+.sobreNos-objetivos dl dt:hover{
+    transform:rotateY(20deg);
+}
+
+/*--------------------- */
+/* PAGINA PRODUCTOS */
+/*--------------------- */
+.productosRemeras{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+.productosBuzos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+
+}
+
+/* PAGINA CARRITO DE COMPRAS */
+.carrito{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+gap: 2rem;
+}
+
+/*--------------------- */
+/* Pagina CONTACTO */
+/*--------------------- */
+.checkout-button { display: block; width: 100%; padding: 10px; background-color: #28a745; color: white; text-align: center; text-decoration: none; }
+.cart-total { text-align: right; padding: 10px; }
+
+
+
+
+
+
+
+/* PAGINA CONTACTO */
+
+
+
+
+/* ---------------- */
+/* DISEÑO RESPONSIVE */
+/* Para una pantalla grande */
+@media (min-width:768px){
+.height-cart{
+      height: auto;
+    }
+    .video-oculto{
+        display: none;
+    }
+}
+/* Para una pantalla mediana */
+@media (max-width:940px){
+    .header{
+        flex-direction: column;
+    }
+
+    .encabezado h1{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .menu a{
+        margin: 0px 5px;
+        font-size: 13px;
+        border-bottom:solid 2px #b4a6d2;
+    }
+    .icon-compras a i{
+        margin: 0px 10px;
+        font-size: 12px;
+    }
+
+    .sobreNos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .height-cart{
+        height: 320px;
+      }
+    
+}
+
+
+/*--------------------- */
+/* Para un pantalla pequeñas */  
+@media (max-width:480px){
+
+/* PAGINA PRODUCTOS */
+.productosRemeras{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.productosBuzos{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+
+}
+
+}
